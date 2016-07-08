@@ -13,7 +13,7 @@ header {
     height: 80px;
 }
 
-a.selected {
+.selected {
     color: white;
 }
 
@@ -21,20 +21,23 @@ header nav {
     width: 1000px;
     margin-left: auto;
     margin-right: auto;
-    display: table;
 }
 
-
 header nav img {
-    display: table-cell;
-    padding: 0;
-    margin: 0;
+    margin-top: 13px;
+    margin-left: 27px;
+}
+
+header nav img,
+header nav ul {
+    display: inline-block;
+    vertical-align: middle
 }
 
 header nav ul {
-    display: table-cell;
-    list-style: none;
     padding: 0;
+    margin-top: 36.4px;
+    margin-left: 100px;
 }
 
 header nav ul li {
@@ -47,6 +50,7 @@ header nav ul li a {
     letter-spacing: 0px;
     color: #b2b2b2;
     font-weight: 500;
+    margin-right: 13px;
 }
 
 header nav ul li a:hover {
@@ -160,10 +164,12 @@ main {
     display: inline-block;
     margin: 0;
     padding: 20px 0 0 0;
+    margin-bottom: 10px;
 }
 
 .subImage img#midImage {
     margin: 0 16px;
+    margin-bottom: 10px;
 }
 
 .share {
@@ -171,6 +177,8 @@ main {
     margin-left: auto;
     margin-right: auto;
     display: table;
+    padding-left: 3px;
+    margin-top: 30px;
 }
 
 .share p {
@@ -213,6 +221,7 @@ main {
 .author div#author h3 {
     font-size: 13px;
     padding-left: 2px;
+    color: #333;
 }
 
 .author div#author p {
@@ -241,6 +250,7 @@ main {
     font-weight: 500;
     letter-spacing: 0.3px;
     line-height: 22px;
+    color: #666;
 }
 
 .author div#authorDescription p#more {
@@ -251,72 +261,84 @@ main {
     margin-left: auto;
     margin-right: auto;
     padding-top: 10px;
+    color: #333;
 }
 
 footer > h2 {
     text-align: center;
     font-size: 31px;
     font-weight: 500;
+    color: #333;
+    margin-top: 43px;
+    margin-bottom: 0px;
 }
 
 .popularPosts {
-    width: 950px;
+    width: 1000px;
     margin-left: auto;
     margin-right: auto;
-    column-count: 2;
-    column-gap: 30px;
 }
 
-.popularPosts article#post1,
-.popularPosts article#post2,
-.popularPosts article#post3,
-.popularPosts article#post4 {}
+.posts {
+    width: 477px;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    margin-top: 35px;
+    margin-left: 20px;
+}
 
-.popularPosts article#post1 img,
-.popularPosts article#post2 img,
-.popularPosts article#post3 img,
-.popularPosts article#post4 img {
+.posts a {
     float: left;
 }
 
-.popularPosts article#post1 h3,
-.popularPosts article#post2 h3,
-.popularPosts article#post3 h3,
-.popularPosts article#post4 h3 {
+.posts h3 {
     color: #333;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 700;
-    padding-left: 120px;
+    letter-spacing: 1px;
 }
 
-.popularPosts article#post1 p,
-.popularPosts article#post2 p,
-.popularPosts article#post3 p,
-.popularPosts article#post4 p {
+.posts p {
     color: #666;
     font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0px;
+    padding-top: 8px;
     line-height: 15px;
-    padding-left: 120px;
 }
 
-span > em {
+.posts p,
+.posts h3 {
+    margin: 0;
+    margin-left: 120px;
+}
+
+p.readMore {
+    color: #333;
+}
+
+em {
     color: #666;
     font-size: 12px;
     letter-spacing: 0.7px;
-    padding-left: 20px;
-    top: 10px;
+    margin-left: 20px;
+}
+
+.selected {
+    color: white;
 }
 
 .disclaimer {
     text-align: center;
     padding-bottom: 20px;
     background-color: #fafafa;
-    padding-top: 10px;
+    margin-top: 100px;
 }
 
 .disclaimer h5 {
     color: #333;
-    font-size: 13px;
+    font-size: 11px;
 }
 
 .disclaimer p {
@@ -328,12 +350,13 @@ span > em {
     font-weight: 500;
     color: #666;
     line-height: 12px;
+    margin-top: -10px;
 }
 
 .footer {
     background-color: #4d4d4d;
     position: relative;
-    height: 300px;
+    height: 265px;
 }
 
 .footer a {
@@ -355,7 +378,7 @@ span > em {
     width: 600px;
     font-size: 12.5px;
     list-style: none;
-    margin-left: 30px;
+    margin-left: 20px;
     margin-top: 15px;
     padding: 0;
 }
@@ -373,17 +396,22 @@ span > em {
 
 .footer h4 {
     color: white;
-    margin-left: 19px;
+    margin-left: 20px;
+    margin-top: 1px;
+    font-size: 15px;
+    letter-spacing: 0px;
+    font-weight: 500
 }
 
 .bottomNav {
     column-count: 6;
-    margin: 0 9.5px;
+    margin-left: 20px;
+    column-gap: 0px;
 }
 
 .bottomNav ul {
     padding: 0;
-    margin: 0;
+    margin-top: 0;
 }
 
 .copy {
