@@ -371,6 +371,7 @@ footer {
     color: #fff;
     position: relative;
     height: 265px;
+    z-index: 1;
 }
 
 .divBot {
@@ -461,7 +462,6 @@ footer .navBot ul li {
     header,
     nav {
         height: 60px;
-
     }
     nav ul {
         display: none;
@@ -474,7 +474,7 @@ footer .navBot ul li {
         padding: 0;
         height: 45px;
         width: 210px;
-        margin-left: 400px;
+        margin-left: 38%;
         margin-top: 10px;
     }
     .navigation {
@@ -545,5 +545,31 @@ footer .navBot ul li {
     }
     body {
         overflow-x: hidden;
+    }
+    main {
+        width: 100%;
+    }
+    main div.slider p.sliderImage {
+        width: 100%;
+        height: 100%;
+    }
+
+    main div.slider > div p {
+        margin-right: -30%;
+    }
+}
+
+@media screen and (max-width: 930px) {
+    footer,
+    .divBot {
+        width: 100%;
+        height: 400px;
+    }
+    .bottomNav {
+        width: 100%;
+    }
+
+    .bottomNav ul {
+        margin-top: 20px;
     }
 }
