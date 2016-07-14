@@ -10,6 +10,10 @@ body {
     overflow-x: hidden;
 }
 
+body {
+    position: relative;
+}
+
 .navigation {
     display: none;
 }
@@ -71,7 +75,7 @@ nav ul {
     width: 56%;
     left: 40%;
     top: 29px;
-    /*    margin: 46px 30% 0 70%;;*/
+    z-index: 1;
 }
 
 nav ul li a {
@@ -243,9 +247,15 @@ article > img {
     padding-bottom: 20px;
 }
 
+.author > div {
+    width: 660px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .author div#author {
-    float: left;
-    margin-left: 171px;
+    display: inline-block;
 }
 
 .author div#author h3 {
@@ -275,16 +285,17 @@ article > img {
 }
 
 .author div#authorDescription {
-    margin-left: 254px;
+    display: inline-block;
     font-weight: 400;
     font-size: .83em;
     width: 570px;
+    margin-left: 15px;
 }
 
 .author div#authorDescription p#description {
     line-height: 1.7em;
     letter-spacing: -0.2px;
-    margin-top: 40px;
+    margin: 0;
 }
 
 .author div#authorDescription p#more {
@@ -364,7 +375,6 @@ article > img {
 
 footer {
     display: flex;
-    width: 100%;
     background-color: #4d4d4d;
     margin: 0;
     padding: 0;
@@ -375,7 +385,7 @@ footer {
 }
 
 .divBot {
-    width: 1000px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -404,7 +414,6 @@ footer h4 {
 footer .navBot {
     position: absolute;
     margin: 0 auto;
-    ;
     width: 100%;
     font-size: .8em;
     font-weight: 300;
@@ -459,6 +468,10 @@ footer .navBot ul li {
 }
 
 @media screen and (max-width: 1020px) {
+    html,
+    body {
+        overflow-x: hidden;
+    }
     header,
     nav {
         height: 60px;
@@ -494,7 +507,7 @@ footer .navBot ul li {
     }
     .nav-item {
         /* non-critical appearance styles */
-        width: 200px;
+        width: 250px;
         border-top: 1px solid #111;
         border-bottom: 1px solid #000;
     }
@@ -509,8 +522,8 @@ footer .navBot ul li {
         transition: color 0.2s, background 0.5s;
     }
     .nav-item a:hover {
-        color: #c74438;
-        background: linear-gradient(135deg, rgba(0, 0, 0, 0) 0%, rgba(75, 20, 20, 0.65) 100%);
+        color: #82b4e0;
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0) 0%, rgba(130, 180, 224, 0.65) 100%);
     }
     .site-wrap {
         min-width: 100%;
@@ -540,7 +553,8 @@ footer .navBot ul li {
         box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
     }
     .nav-trigger + label,
-    .site-wrap {
+    .site-wrap,
+    divBot.site-wrap {
         transition: left 0.2s;
     }
     body {
@@ -553,9 +567,35 @@ footer .navBot ul li {
         width: 100%;
         height: 100%;
     }
+}
 
+@media screen and (max-width: 1000px) {
+    main div.slider {
+        width: 100%;
+        height: 0;
+        padding-bottom: 30%;
+    }
     main div.slider > div p {
-        margin-right: -30%;
+        display: block;
+        font-size: .7em;
+        margin: 0;
+        text-align: center;
+        margin-top: 5px;
+    }
+    main div.slider > div h2 {
+        font-size: .8em;
+        display: block;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        margin-top: 5px;
+    }
+    main div.slider > div {
+        height: 50px;
+    }
+    main div.slider p.sliderImage {
+        background-size: contain;
+        height: 100%;
     }
 }
 
@@ -568,8 +608,113 @@ footer .navBot ul li {
     .bottomNav {
         width: 100%;
     }
-
     .bottomNav ul {
         margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 856px) {
+    header,
+    nav {
+        height: 50px;
+    }
+    p.logo {
+        background-size: 150px auto;
+        height: 35px;
+    }
+    label[for="nav-trigger"] {
+        width: 25px;
+        height: 25px;
+    }
+    .popularPosts > div > div.postsContainer {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .popularPosts div article {
+        display: inline-block;
+        width: 48%;
+        margin: 3px;
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 690px) {
+    article.article {
+        width: 90%;
+    }
+    article.article h1 {
+        font-size: 1.5em;
+    }
+    .author div#author {
+        display: block;
+        text-align: center;
+    }
+    .author div#authorDescription {
+        display: block;
+        font-weight: 400;
+        font-size: .83em;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    article > img {
+        width: 100%;
+        height: 100%;
+    }
+    .subImage {
+        margin: 0;
+        padding: 0;
+        display: block;
+    }
+    .subImage img {
+        display: inline-block;
+        width: 30%;
+        margin-top: 15px;
+    }
+    .subImage img#midImage {
+        margin: 0 3% 0 3%;
+    }
+    .disclaimer {
+        width: 90%;
+    }
+    .navBot {
+        display: none;
+    }
+    .nav-trigger:checked + label {
+        left: 255px;
+    }
+    .nav-trigger:checked ~ .site-wrap {
+        left: 250px;
+        box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
+    }
+    .nav-item a {
+        font-size: .7em;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    p.logo {
+        margin-left: 30%;
+    }
+    .popularPosts div article {
+        display: block;
+        width: 100%;
+        margin: 3px;
+        margin-top: 10px;
+    }
+    footer h4 {
+        margin-left: 19px;
+        margin-top: 70px;
+        font-size: .9em;
+    }
+    .bottomNav {}
+    .bottomNav ul {
+        width: 140px;
+        margin: 5px 0 0 15px;
+    }
+    footer h4 {
+        margin-top: 10px;
     }
 }
